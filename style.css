@@ -1,0 +1,459 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Variables from joinus.css */
+:root {
+    --primary-green: #2F855A;
+    --accent-green: #7ED957;
+    --light-green: #A7F3D0;
+    --white: #FFFFFF;
+    --text-dark: #1A202C;
+    --text-gray: #4A5568;
+    --gradient: linear-gradient(135deg, #2F855A 0%, #7ED957 100%);
+
+    /* Additional variables for consistency if needed */
+    --border-radius-card: 15px;
+    --border-radius-img: 10px;
+    --shadow-light: 0 5px 15px rgba(47, 133, 90, 0.08);
+    --shadow-medium: 0 10px 25px rgba(47, 133, 90, 0.12);
+    --section-padding-y: 4rem; /* Standard padding for sections */
+    --main-duration: 0.3s;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    overflow-x: hidden;
+    background-color: var(--white);
+}
+
+h1, h2, h3, h4, h5, h6 { /* h5, h6 added for completeness */
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    color: var(--primary-green); /* Default heading color */
+}
+
+.container { /* Adjusted to match joinus.css */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem; /* Padding from joinus.css */
+}
+
+section { /* Default padding for sections */
+    padding-top: var(--section-padding-y);
+    padding-bottom: var(--section-padding-y);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+a {
+    text-decoration: none;
+    color: var(--accent-green); /* Default link color */
+    transition: color var(--main-duration);
+}
+a:hover {
+    color: var(--primary-green);
+}
+
+
+/* Navigation (Adapted from joinus.css 'nav') */
+.header { /* Targeting .header from old HTML */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--gradient);
+    z-index: 1000;
+    padding: 1rem 0; /* joinus.css nav padding */
+    box-shadow: 0 2px 20px rgba(47, 133, 90, 0.1);
+}
+.header .nav-container { /* Using .nav-container class added to HTML */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .logo { /* Using .logo class added to HTML */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--white);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.header .logo img {
+    width: 40px;
+    height: auto;
+}
+.header .nav-links { /* Using .nav-links class added to HTML ul */
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0; padding: 0; /* Reset */
+}
+.header .nav-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    transition: color var(--main-duration);
+}
+.header .nav-links a:hover,
+.header .nav-links a.active { /* Assuming an .active class might be used */
+    color: var(--light-green); /* Lighter accent for hover */
+}
+.header .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--light-green); /* Lighter accent for underline */
+    transition: width var(--main-duration);
+}
+.header .nav-links a:hover::after,
+.header .nav-links a.active::after {
+    width: 100%;
+}
+.header .icon.mobile-nav-toggle { /* Styling old hamburger */
+    display: none; /* Hide on desktop */
+    width: 30px;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+    cursor: pointer;
+}
+.header .icon.mobile-nav-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 2px;
+    transition: all var(--main-duration);
+}
+/* Active state for hamburger (JS will toggle .active on .links div) */
+.header .links.active .icon.mobile-nav-toggle span:first-child {
+    transform: translateY(8px) rotate(45deg);
+}
+.header .links.active .icon.mobile-nav-toggle span:nth-child(2) {
+    opacity: 0;
+}
+.header .links.active .icon.mobile-nav-toggle span:last-child {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* Hero Section (Styling .landing like .hero from joinus.css) */
+.landing.hero { /* Targeting .landing.hero */
+    background: var(--gradient);
+    color: var(--white);
+    padding: 8rem 0 4rem; /* From joinus.css hero */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 70vh; /* Adjusted height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* For JS Slider background */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out;
+}
+.landing.hero::before { /* Pattern from joinus.css hero */
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="30" cy="25" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="70" cy="15" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="35" r="1.2" fill="rgba(255,255,255,0.1)"/><circle cx="20" cy="60" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="70" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="80" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+    opacity: 0.8; /* Slightly more visible */
+}
+.landing .hero-content { /* Using .hero-content class from HTML */
+    position: relative;
+    z-index: 1;
+}
+.landing .name h1 { /* Targeting old h1 within .name */
+    font-size: 3.5rem; /* From joinus.css hero h1 */
+    margin-bottom: 1rem;
+    color: var(--white);
+    font-weight: 700;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+.landing .name p { /* Example for sub-headline if added */
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--white);
+}
+
+/* General Section Title Styling (Replaces .special-heading) */
+.section-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: var(--primary-green);
+}
+.section-subtitle { /* For p tags after .section-title */
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Tagline Section Styling */
+.tagline-section {
+    background: linear-gradient(135deg, rgba(167, 243, 208, 0.1) 0%, rgba(126, 217, 87, 0.05) 100%); /* Soft bg from joinus form section */
+    /* For GIF background: */
+    /* background-image: url("../images/tagline-bg.gif"); */
+    /* background-size: cover; background-position: center; position: relative; */
+}
+/* Overlay if using GIF background for tagline */
+/* .tagline-section::before {
+    content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); z-index: 1;
+}
+.tagline-section .container { position: relative; z-index: 2; } */
+
+.tagline .tag {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: var(--border-radius-card);
+    box-shadow: var(--shadow-medium);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.tagline .taglogo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+.tagline .tag h2 {
+    font-size: 1.8rem;
+    color: var(--primary-green);
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* Intro Section Styling */
+.intro-section { background: var(--white); }
+.intro-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 2rem; /* After .section-title */
+}
+.intro-content p {
+    flex: 2;
+    font-size: 1.05rem;
+    color: var(--text-gray);
+}
+.intro .intropict {
+    flex: 1;
+    max-width: 350px;
+    border-radius: var(--border-radius-img);
+    box-shadow: var(--shadow-light);
+}
+
+/* SDGs & Activity Sections - Card Styling (like .benefit-card from joinus.css) */
+.sdgs-section { background: linear-gradient(135deg, rgba(167, 243, 208, 0.08) 0%, rgba(126, 217, 87, 0.03) 100%); }
+.activity-section { background: var(--white); }
+
+.sdgs-content, .activity-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem; /* After section title/subtitle */
+}
+.card-style { /* Common class for .poinsdgs and .poinactivity */
+    background: var(--white);
+    border-radius: var(--border-radius-card);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow-light);
+    transition: all var(--main-duration) ease;
+    display: flex;
+    flex-direction: column;
+}
+.card-style:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+.poinsdgs img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+    border-radius: var(--border-radius-img);
+    background-color: var(--white);
+}
+.activitypict {
+    font-size: 2.5rem; /* Similar to benefit-icon */
+    margin: 0 auto 1.5rem auto;
+    width: 80px;
+    height: 80px;
+    background-color: var(--light-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.activitypict img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.poinsdgs .info, .poinactivity { flex-grow: 1; } /* .poinactivity is the card itself */
+.poinsdgs .info h3, .poinactivity h3 {
+    color: var(--primary-green);
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+}
+.poinsdgs .info p, .poinactivity p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+.poinsdgs .info a.link { color: var(--primary-green); text-decoration: none; border-bottom: 1px dotted var(--primary-green); }
+.poinsdgs .info a.link:hover { color: var(--accent-green); border-bottom-color: var(--accent-green); }
+
+/* Greetings Section & Slider Styling */
+.greetings-section { background: linear-gradient(135deg, rgba(167, 243, 208, 0.1) 0%, rgba(126, 217, 87, 0.05) 100%); }
+.greetings-slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-top: 2rem; /* After section title */
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius-card);
+    box-shadow: var(--shadow-medium);
+}
+.greetings-slide {
+    display: none;
+    flex-wrap: wrap; /* Allow content to wrap */
+    align-items: flex-start;
+    gap: 2rem;
+    animation: fadeEffect 1.5s;
+}
+.greetings-slide.active { display: flex; }
+.greetings-image-container {
+    flex: 1;
+    max-width: 230px;
+    min-width: 180px; /* Ensure image has some width */
+}
+.greetings-image-container img {
+    width: 100%;
+    border-radius: var(--border-radius-img);
+    box-shadow: var(--shadow-light);
+    border: 4px solid var(--white);
+}
+.greetings-text-container {
+    flex: 2;
+    min-width: 280px; /* Ensure text has some width */
+}
+.greetings-name { /* Class for name/title */
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+.greetings-hr { /* Class for hr */
+    border: 0;
+    height: 1px;
+    background-color: var(--light-green);
+    margin: 1rem 0;
+}
+.greetings-message { /* Class for the message */
+    color: var(--text-gray);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+.greetings-nav { text-align: center; margin-top: 1.5rem; }
+.greetings-nav button {
+    background: var(--gradient);
+    color: var(--white);
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 25px; /* Rounded button */
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--main-duration) ease;
+    margin: 0 0.5rem;
+}
+.greetings-nav button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(47, 133, 90, 0.2);
+}
+@keyframes fadeEffect { from {opacity: .4} to {opacity: 1} }
+
+/* Footer Section */
+.footer-section {
+    background-color: var(--primary-green); /* Darker green for footer */
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 0;
+}
+.footer-section p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+.footer-section p:last-child { margin-bottom: 0; }
+.footer-section a { color: var(--light-green); }
+.footer-section a:hover { color: var(--white); }
+
+
+/* Responsive Adjustments */
+@media (max-width: 992px) { /* Tablets */
+    .container { padding: 0 1.5rem; }
+    .section-title { font-size: 2.2rem; }
+    .intro-content { flex-direction: column; text-align: center; }
+    .intro .intropict { margin-top: 2rem; max-width: 70%; }
+    .greetings-slide { flex-direction: column; align-items: center; text-align: center;}
+    .greetings-image-container { margin-bottom: 1.5rem; }
+}
+
+@media (max-width: 768px) { /* Mobile */
+    .header .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--gradient);
+        flex-direction: column;
+        padding: 1rem 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    .header .links.active .nav-links { display: flex; } /* JS toggles .active on .links */
+    .header .icon.mobile-nav-toggle { display: flex; }
+
+    .landing.hero { padding: 6rem 0 3rem; min-height: 50vh; }
+    .landing .name h1 { font-size: 2.5rem; }
+    .section-title { font-size: 2rem; }
+    .section-subtitle { font-size: 1rem; margin-bottom: 2rem; }
+    .sdgs-content, .activity-content { grid-template-columns: 1fr; }
+    .tagline .tag, .greetings-slider-wrapper { padding: 1.5rem; }
+    .greetings-slide { padding: 1.5rem; /* Adjust padding for slide content */ }
+}

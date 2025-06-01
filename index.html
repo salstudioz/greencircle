@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Circle</title>
+    <!-- Google Fonts (Sesuai joinus.css) -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Normalize CSS (opsional, jika Anda ingin menggunakannya) -->
+    <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Start Header (Menggunakan class .header dari HTML lama, akan di-style seperti nav joinus.css) -->
+    <nav class="header"> <!-- Menambahkan class nav untuk styling yang lebih mudah, atau target .header saja -->
+        <div class="container nav-container"> <!-- Menggunakan .container dan .nav-container dari joinus -->
+            <a href="index.html" class="logo"> <!-- .logo dari joinus -->
+                <img src="images/logo.png" alt="Green Circle Logo" /> <!-- GANTI PATH LOGO -->
+                <span>Green Circle</span> <!-- Teks untuk logo seperti joinus -->
+            </a>
+            <div class="links"> <!-- .links dari HTML lama untuk menampung ul dan ikon hamburger -->
+                <ul class="nav-links"> <!-- .nav-links dari joinus -->
+                    <li><a href="#intro">Visi Misi</a></li>
+                    <li><a href="#activity">Portfolio</a></li>
+                    <li><a href="#greetings">About</a></li>
+                    <li><a href="#">Contact</a></li> <!-- Ganti href jika perlu -->
+                </ul>
+                <span class="icon mobile-nav-toggle"> <!-- .icon dari HTML lama, tambahkan class untuk JS jika perlu -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <!-- End Header -->
+
+    <!-- Start Landing Section (Menggunakan .landing, akan di-style seperti .hero joinus.css) -->
+    <section class="landing hero" id="landing-slider"> <!-- Menambahkan class hero dan ID -->
+        <div class="container hero-content"> <!-- .container dan .hero-content dari joinus -->
+            <div class="name">
+                <h1>Green Circle</h1>
+                <!-- Jika ada subjudul, bisa ditambahkan di sini -->
+                <!-- <p>Deskripsi singkat atau subjudul landing page</p> -->
+            </div>
+        </div>
+    </section>
+    <!-- End Landing Section -->
+
+    <!-- Start Tagline -->
+    <section class="tagline-section"> <!-- Menggunakan section untuk padding standar -->
+        <div class="container">
+            <div class="tag">
+                <img class="taglogo" src="images/logo.png" alt="Green Circle Tag Logo" /> <!-- GANTI PATH LOGO -->
+                <h2>Your Circle for a Greener Future.</h2>
+            </div>
+        </div>
+    </section>
+    <!-- End Tagline -->
+
+    <!-- Start Introduction -->
+    <section class="intro-section" id="intro">
+        <div class="container">
+            <h2 class="section-title">Apa itu Green Circle?</h2> <!-- Menggunakan class umum untuk judul section -->
+            <div class="intro-content">
+                <p>
+                Green Circle adalah komunitas aksi lingkungan berbasis kolaborasi yang berfokus pada edukasi, gerakan sukarela, dan inovasi berkelanjutan.
+                Kami percaya bahwa perubahan besar dimulai dari komunitas yang peduli, bergerak, dan saling menguatkan untuk bumi yang lebih hijau.
+                </p>
+                <img class="intropict" src="images/intropict.heic" alt="Introduction Picture" /> <!-- GANTI PATH GAMBAR -->
+            </div>
+        </div>
+    </section>
+    <!-- End Introduction -->
+
+    <!-- Start SDGs -->
+    <section class="sdgs-section" id="sdgs">
+        <div class="container">
+            <h2 class="section-title">SDGs</h2>
+            <p class="section-subtitle">Sustainable Development Goals</p> <!-- Class untuk subjudul -->
+            <div class="sdgs-content">
+                <div class="poinsdgs card-style"> <!-- Menambahkan .card-style -->
+                    <img src="https://dashboard.sdgcenter.unila.ac.id/img/sdgs/13.png" alt="SDG 13 Climate Action" />
+                    <div class="info">
+                        <h3><a href="https://www.globalgoals.org/goals/13-climate-action/" class="link">SDGs 13</a></h3>
+                        <p>Bertujuan untuk mengambil tindakan segera dan mendesak untuk memerangi perubahan iklim dan dampaknya.</p>
+                    </div>
+                </div>
+                <div class="poinsdgs card-style">
+                    <img src="https://dashboard.sdgcenter.unila.ac.id/img/sdgs/14.png" alt="SDG 14 Life Below Water" />
+                    <div class="info">
+                        <h3><a href="https://www.globalgoals.org/goals/14-life-below-water/" class="link">SDGs 14</a></h3>
+                        <p>Bertujuan untuk melestarikan dan memanfaatkan samudra, laut, dan sumber daya kelautan secara berkelanjutan.</p>
+                    </div>
+                </div>
+                <div class="poinsdgs card-style">
+                    <img src="https://dashboard.sdgcenter.unila.ac.id/img/sdgs/15.png" alt="SDG 15 Life On Land" />
+                    <div class="info">
+                        <h3><a href="https://www.globalgoals.org/goals/15-life-on-land/" class="link">SDGs 15</a></h3>
+                        <p>Bertujuan melindungi, merestorasi, dan meningkatkan pemanfaatan berkelanjutan ekosistem daratan...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End SDGs -->
+
+    <!-- Start Activity -->
+    <section class="activity-section" id="activity">
+        <div class="container">
+            <h2 class="section-title">Ada Apa Aja di Green Circle?</h2>
+            <div class="activity-content">
+                <div class="poinactivity card-style">
+                <div class="activitypict">
+                    <img src="images/volunteer.HEIC" alt="Volunteer Activity" /> <!-- GANTI PATH GAMBAR -->
+                </div>
+                    <h3>Volunteer</h3>
+                    <p>Program relawan terbuka untuk masyarakat yang ingin terlibat langsung dalam aksi lingkungan...</p>
+                </div>
+                <div class="poinactivity card-style">
+                <div class="activitypict">
+                    <img src="images/bootcamp.HEIC" alt="SDGs Bootcamp" /> <!-- GANTI PATH GAMBAR -->
+                </div>
+                    <h3>SDGs Bootcamp</h3>
+                    <p>Program intensif selama beberapa hari yang membekali peserta dengan pemahaman mendalam tentang SDGs...</p>
+                </div>
+                <div class="poinactivity card-style">
+                <div class="activitypict">
+                    <img src="images/banksampah.HEIC" alt="Bank Sampah" /> <!-- GANTI PATH GAMBAR -->
+                </div>
+                    <h3>Bank Sampah</h3>
+                    <p>Layanan bank sampah komunitas yang mengedukasi masyarakat dalam memilah, mengelola, dan menukar sampah...</p>
+                </div>
+                <div class="poinactivity card-style">
+                <div class="activitypict">
+                    <img src="images/collaboration.HEIC" alt="Collaboration Program" /> <!-- GANTI PATH GAMBAR -->
+                </div>
+                    <h3>Collaboration</h3>
+                    <p>Program kemitraan bersama sekolah, kampus, komunitas lokal, dan brand yang ingin menjalankan proyek...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Activity -->
+
+    <!-- Start Greetings -->
+    <section class="greetings-section" id="greetings">
+        <div class="container">
+            <h2 class="section-title">Dari Visi Menjadi Aksi</h2>
+            <div class="greetings-slider-wrapper" id="greetings-slider-container"> <!-- Wrapper untuk slider -->
+                <!-- Slide 1: Founder -->
+                <div class="greetings-slide active">
+                    <div class="greetings-image-container">
+                        <img src="images/yazidformal.png" alt="Yazid Nugraha" /> <!-- GANTI PATH GAMBAR -->
+                    </div>
+                    <div class="greetings-text-container">
+                        <p class="greetings-name">Yazid Nugraha - Founder Green Circle</p>
+                        <hr class="greetings-hr" />
+                        <p class="greetings-message">Di tengah krisis iklim dan meningkatnya timbunan sampah...</p>
+                    </div>
+                </div>
+                <!-- Slide 2: Pengurus Lain (Contoh) -->
+                <div class="greetings-slide">
+                     <div class="greetings-image-container">
+                        <img src="images/pengurus2.png" alt="Nama Pengurus 2" /> <!-- GANTI GAMBAR, NAMA, JABATAN, PESAN -->
+                    </div>
+                    <div class="greetings-text-container">
+                        <p class="greetings-name">Nama Pengurus 2 - Jabatan</p>
+                        <hr class="greetings-hr" />
+                        <p class="greetings-message">Ini adalah pesan dari pengurus kedua...</p>
+                    </div>
+                </div>
+                <!-- Slide 3: Pengurus Lain (Contoh) -->
+                <div class="greetings-slide">
+                     <div class="greetings-image-container">
+                        <img src="images/pengurus3.jpg" alt="Nama Pengurus 3" /> <!-- GANTI GAMBAR, NAMA, JABATAN, PESAN -->
+                    </div>
+                    <div class="greetings-text-container">
+                        <p class="greetings-name">Nama Pengurus 3 - Jabatan Lain</p>
+                        <hr class="greetings-hr" />
+                        <p class="greetings-message">Bergabunglah dengan Green Circle...</p>
+                    </div>
+                </div>
+                <!-- Tambahkan lebih banyak .greetings-slide jika perlu -->
+            </div>
+            <div class="greetings-nav">
+                <button>&#10094; Prev</button>
+                <button>Next &#10095;</button>
+            </div>
+        </div>
+    </section>
+    <!-- End Greetings -->
+
+    <!-- Footer (Contoh sederhana) -->
+    <footer class="footer-section">
+        <div class="container">
+            <p>&copy; 2024 Green Circle. All Rights Reserved.</p>
+            <p>Your Circle for a Greener Future.</p>
+        </div>
+    </footer>
+
+    <!-- Link ke file JavaScript eksternal -->
+    <script src="javascript.js"></script> <!-- Ganti path jika script.js tidak di folder js/ -->
+</body>
+</html>
