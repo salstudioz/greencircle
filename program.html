@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - Green Circle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo-green-circle.png" alt="Green Circle Logo">
+                <span>Green Circle</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang</a></li>
+                <li><a href="program.html" class="active">Program</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="joinus.html">Join Us</a></li>
+                <li><a href="#kontak">Login</a></li>
+            </ul>
+            
+            <div class="mobile-nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Program Kami</h1>
+                <p>Ambil Peran Jadi Relawan - Ubah niat baik jadi aksi baik hari ini</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-icon">👥</div>
+                <div class="stat-number" data-target="292156">0</div>
+                <div class="stat-label">Relawan</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon">❤️</div>
+                <div class="stat-number" data-target="6344">0</div>
+                <div class="stat-label">Organisasi</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-number" data-target="12012">0</div>
+                <div class="stat-label">Aktivitas</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main" id="programs">
+        <div class="container">
+            <p style="text-align: center; color: #666; margin-bottom: 2rem; margin-top: 5rem;">
+                Pilih aktivitas kerelawanan sesuai minat, lokasi, dan isu yang kamu sukai
+            </p>
+
+            <!-- Tab Navigation -->
+            <div class="tab-navigation">
+                <button class="tab-btn active" onclick="showTab('event')">Event</button>
+                <button class="tab-btn" onclick="showTab('regular')">Regular</button>
+                <button class="tab-btn" onclick="showTab('project')">Project</button>
+                <button class="tab-btn" onclick="showTab('webinar')">Webinar</button>
+            </div>
+
+            <!-- Event Tab -->
+            <div id="event" class="tab-content active">
+                <div class="programs-grid">
+                    <div class="program-card">
+                        <div class="status-badge status-open">Batas Registrasi 6 Hari Lagi</div>
+                        <div class="program-header">
+                            <div class="program-icon">👥</div>
+                            <h2 class="program-title">Calling for CID-8 Volunteers!</h2>
+                        </div>
+                        <div class="program-meta">
+                            <div class="meta-item">📅 1 Jul 2025, dst.</div>
+                            <div class="meta-item">📍 Aktivitas Virtual</div>
+                        </div>
+                        <p class="program-description">
+                            Indonesian Diaspora Network Global mengundang relawan untuk berpartisipasi dalam Community Impact Day ke-8.
+                        </p>
+                        <div class="program-tags">
+                            <span class="tag">Pengembangan Masyarakat</span>
+                        </div>
+                        <div class="program-cta">
+                            <button class="btn-primary"><i class="fas fa-user-plus"></i> Daftar Sekarang</button>
+                            <button class="btn-secondary"><i class="fas fa-info-circle"></i> Detail</button>
+                        </div>
+                    </div>
+
+                    <div class="program-card">
+                        <div class="status-badge status-open">Batas Registrasi 7 Hari Lagi</div>
+                        <div class="program-header">
+                            <div class="program-icon">🎓</div>
+                            <h2 class="program-title">MS Experience by Jessy - Sahabat MS</h2>
+                        </div>
+                        <div class="program-meta">
+                            <div class="meta-item">📅 31 Mei 2025, dst.</div>
+                            <div class="meta-item">📍 Kota Administrasi Jakarta Selatan</div>
+                        </div>
+                        <p class="program-description">
+                            Bergabunglah dalam program berbagi pengalaman dengan penderita Multiple Sclerosis untuk memberikan dukungan dan edukasi.
+                        </p>
+                        <div class="program-tags">
+                            <span class="tag">Kesehatan</span>
+                            <span class="tag">Pendidikan</span>
+                        </div>
+                        <div class="program-cta">
+                            <button class="btn-primary"><i class="fas fa-user-plus"></i> Daftar Sekarang</button>
+                            <button class="btn-secondary"><i class="fas fa-info-circle"></i> Detail</button>
+                        </div>
+                    </div>
+
+                    <div class="program-card">
+                        <div class="status-badge status-open">Batas Registrasi 1 Hari lagi</div>
+                        <div class="program-header">
+                            <div class="program-icon">📚</div>
+                            <h2 class="program-title">Membalik Halaman #104</h2>
+                        </div>
+                        <div class="program-meta">
+                            <div class="meta-item">📅 31 Mei 2025</div>
+                            <div class="meta-item">📍 Kota Administrasi Jakarta Pusat</div>
+                        </div>
+                        <p class="program-description">
+                            Program literasi untuk anak-anak dengan kegiatan membaca bersama dan diskusi buku yang menyenangkan.
+                        </p>
+                        <div class="program-tags">
+                            <span class="tag">Pengembangan Masyarakat</span>
+                            <span class="tag">Pendidikan</span>
+                        </div>
+                        <div class="program-cta">
+                            <button class="btn-primary"><i class="fas fa-user-plus"></i> Daftar Sekarang</button>
+                            <button class="btn-secondary"><i class="fas fa-info-circle"></i> Detail</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regular Tab -->
+            <div id="regular" class="tab-content">
+                <div class="programs-grid">
+                    <div class="program-card">
+                        <div class="status-badge status-open">Batas Registrasi 1 Hari Lagi</div>
+                        <div class="program-header">
+                            <div class="program-icon">🧹</div>
+                            <h2 class="program-title">Volunteer Sains Seru</h2>
+                        </div>
+                        <div class="program-meta">
+                            <div class="meta-item">📅 Sabtu, Minggu</div>
+                            <div class="meta-item">📍 Kota Administrasi Jakarta Pusat</div>
+                        </div>
+                        <p class="program-description">
+                            Program rutin pembersihan lingkungan dan edukasi sains untuk anak-anak di komunitas sekitar.
+                        </p>
+                        <div class="program-tags">
+                            <span class="tag">Pendidikan</span>
+                            <span class="tag">Lingkungan</span>
+                        </div>
+                        <div class="program-cta">
+                            <button class="btn-primary"><i class="fas fa-user-plus"></i> Daftar Sekarang</button>
+                            <button class="btn-secondary"><i class="fas fa-info-circle"></i> Detail</button>
+                        </div>
+                    </div>
+
+                    <div class="program-card">
+                        <div class="status-badge status-open">Batas Registrasi 1 Hari Lagi</div>
+                        <div class="program-header">
+                            <div class="program-icon">📋</div>
+                            <h2 class="program-title">OPEN RECRUITMENT RELAWAN FASILITATOR</h2>
+                        </div>
+                        <div class="program-meta">
+                            <div class="meta-item">📅 Kam, Jum, Sab</div>
+                            <div class="meta-item">📍 Aktivitas Virtual</div>
+                        </div>
+                        <p class="program-description">
+                            Rekrutmen terbuka untuk relawan fasilitator program pelatihan dan pengembangan komunitas.
+                        </p>
+                        <div class="program-tags">
+                            <span class="tag">Pendidikan</span>
+                            <span class="tag">Pengembangan Masyarakat</span>
+                        </div>
+                        <div class="program-cta">
+                            <button class="btn-primary"><i class="fas fa-user-plus"></i> Daftar Sekarang</button>
+                            <button class="btn-secondary"><i class="fas fa-info-circle"></i> Detail</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Tab -->
+            <div id="project" class="tab-content">
+                <div class="programs-grid">
+                    <div class="program-card">
+                        <div class="status-badge status-open">Batas Registrasi 6 Hari Lagi</div>
+                        <div class="program-header">
+                            <div class="program-icon">🏠</div>
+                            <h2 class="program-title">Open Recruitment Volunteer - Rumah Gagas Bersama</h2>
+                        </div>
+                        <div class="program-meta">
+                            <div class="meta-item">📅 6 Jun 2025 - 6 Jun 2026</div>
+                            <div class="meta-item">📍 Aktivitas Virtual</div>
+                        </div>
+                        <p class="program-description">
+                            Proyek jangka panjang untuk pemberdayaan masyarakat melalui program Rumah Gagas Bersama.
+                        </p>
+                        <div class="program-tags">
+                            <span class="tag">Pengembangan Masyarakat</span>
+                            <span class="tag">Pendidikan</span>
+                        </div>
+                        <div class="program-cta">
+                            <button class="btn-primary"><i class="fas fa-user-plus"></i> Daftar Sekarang</button>
+                            <button class="btn-secondary"><i class="fas fa-info-circle"></i> Detail</button>
+                        </div>
+                    </div>
+
+                    <div class="program-card">
+                        <div class="status-badge status-coming">EXTENDED</div>
+                        <div class="program-header">
+                            <div class="program-icon">🎯</div>
+                            <h2 class="program-title">EXTENDED OPREC VOLUNTEER LENS</h2>
+                        </div>
+                        <div class="program-meta">
+                            <div class="meta-item">📅 4 Jun 2025 - 31 Agu 2025</div>
+                            <div class="meta-item">📍 Aktivitas Virtual</div>
+                        </div>
+                        <p class="program-description">
+                            Perpanjangan periode rekrutmen untuk program LENS (Leadership Enhancement for Next Society).
+                        </p>
+                        <div class="program-tags">
+                            <span class="tag">Pendidikan</span>
+                            <span class="tag">Pengembangan Diri</span>
+                        </div>
+                        <div class="program-cta">
+                            <button class="btn-primary"><i class="fas fa-user-plus"></i> Daftar Sekarang</button>
+                            <button class="btn-secondary"><i class="fas fa-info-circle"></i> Detail</button>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                 <!-- Sistem Bank Sampah Section -->
+<div class="program-section">
+    <h3 class="section-title">Sistem Bank Sampah</h3>
+    <p class="program-description">
+        Program Bank Sampah Green Circle menerapkan sistem pengelolaan sampah terpadu dimana masyarakat dapat menabung sampah anorganik yang telah dipilah. Setiap transaksi dicatat dalam buku tabungan dan dapat ditukarkan dengan berbagai benefit.
+    </p>
+    <ul class="feature-list">
+        <li>Pemilahan sampah berdasarkan jenis (plastik, kertas, logam, dll)</li>
+        <li>Penimbangan dan pencatatan dalam sistem digital</li>
+        <li>Penghitungan nilai sampah berdasarkan harga pasar</li>
+        <li>Penukaran dengan uang atau barang kebutuhan</li>
+        <li>Pengolahan lanjutan oleh mitra daur ulang</li>
+    </ul>
+    
+   <!-- Lokasi Bank Sampah Section -->
+<h3 class="section-title">Lokasi Bank Sampah</h3>
+<div class="map-container" style="height: 500px;">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.80924247392!2d109.5130458!3d-7.3585148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70875eb425c7cb%3A0x55039b4c927c7a01!2sBank%20sampah%20maju%20berkah!5e0!3m2!1sen!2sid!4v1620212345678&markers=color:green%7C-7.1802997,110.418761&markers=color:green%7C-7.3880646,109.3537834&zoom=9"
+        class="responsive-iframe"
+        allowfullscreen
+        loading="lazy">
+    </iframe>
+</div>
+<p class="map-caption">
+    <span style="color:green; font-weight:bold;">📍</span> Lokasi Bank Sampah Green Circle
+</p>
+   
+    <!-- Mitra Section -->
+<h3 class="section-title">Mitra Kami</h3>
+<p class="program-description">
+    Green Circle bekerja sama dengan berbagai mitra strategis untuk pengolahan lanjutan sampah dan program CSR:
+</p>
+<div class="map-container" style="height: 500px;">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2438552!2d106.8036661!3d-6.2438552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f16eeaaaaaab%3A0xee70eccdd9f056ce!2sYayasan%20Konservasi%20Alam%20Nusantara!5e0!3m2!1sen!2sid!4v1620212345678&markers=color:red%7C-6.2438552,106.8036661&zoom=15&center=-6.2438552,106.8036661"
+        class="responsive-iframe"
+        allowfullscreen
+        loading="lazy">
+    </iframe>
+</div>
+<p class="map-caption">
+    <span style="color:red; font-weight:bold;">🔺</span> Lokasi Mitra Green Circle
+</p>
+    <div class="program-tags">
+        <span class="tag">Lingkungan</span>
+        <span class="tag">Ekonomi Sirkular</span>
+        <span class="tag">Pemberdayaan Masyarakat</span>
+    </div>
+    <div class="program-cta">
+        <button class="btn-primary">Daftar Jadi Anggota</button>
+        <button class="btn-secondary">Lihat Lokasi Terdekat</button>
+    </div>
+</div>
+            </div>
+
+            <!-- Webinar Tab -->
+            <div id="webinar" class="tab-content">
+                <div class="programs-grid">
+                    <div class="program-card">
+                        <div class="status-badge status-open">Batas Registrasi 1 Hari Lagi</div>
+                        <div class="program-header">
+                            <div class="program-icon">💻</div>
+                            <h2 class="program-title">Kelas Menulis: menulis untuk healing</h2>
+                        </div>
+                        <div class="program-meta">
+                            <div class="meta-item">📅 1 Jun 2025</div>
+                            <div class="meta-item">📍 Webinar</div>
+                        </div>
+                        <p class="program-description">
+                            Webinar tentang teknik menulis sebagai terapi dan cara untuk menyembuhkan diri melalui tulisan.
+                        </p>
+                        <div class="program-tags">
+                            <span class="tag">Pusat Informasi dan Kajian</span>
+                        </div>
+                        <div class="program-cta">
+                            <button class="btn-primary"><i class="fas fa-user-plus"></i> Daftar Sekarang</button>
+                            <button class="btn-secondary"><i class="fas fa-info-circle"></i> Detail</button>
+                        </div>
+                    </div>
+
+                    <div class="program-card">
+                        <div class="status-badge status-open">Batas Registrasi 6 Hari Lagi</div>
+                        <div class="program-header">
+                            <div class="program-icon">🧑‍💼</div>
+                            <h2 class="program-title">Open Recruitment Volunteer - Rumah Gagas Bersama</h2>
+                        </div>
+                        <div class="program-meta">
+                            <div class="meta-item">📅 6 Jun 2025 - 6 Jun 2026</div>
+                            <div class="meta-item">📍 Aktivitas Virtual</div>
+                        </div>
+                        <p class="program-description">
+                            Webinar orientasi untuk calon relawan program Rumah Gagas Bersama dengan materi lengkap.
+                        </p>
+                        <div class="program-tags">
+                            <span class="tag">Pengembangan Masyarakat</span>
+                            <span class="tag">Pendidikan</span>
+                        </div>
+                        <div class="program-cta">
+                            <button class="btn-primary"><i class="fas fa-user-plus"></i> Daftar Sekarang</button>
+                            <button class="btn-secondary"><i class="fas fa-info-circle"></i> Detail</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">○</div>
+                        Green Circle
+                    </div>
+                    <p style="color: #E8F5E8; margin-bottom: 1rem;">Membangun komunitas peduli lingkungan untuk Indonesia yang lebih hijau.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Program Kami</h3>
+                    <ul>
+                        <li><a href="program.html">Bank Sampah</a></li>
+                        <li><a href="program.html">Edukasi Lingkungan</a></li>
+                        <li><a href="program.html">Penghijauan</a></li>
+                        <li><a href="program.html">Kampanye Zero Waste</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="joinus.html">Gabung Jadi Relawan</a></li>
+                        <li><a href="#">Donasi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontak</h3>
+                    <ul>
+                        <li><a href="tel:+628123456789">+62 812 3456 789</a></li>
+                        <li><a href="mailto:info@greencircle.org">info@greencircle.org</a></li>
+                        <li><a href="#">Jl. Hijau Lestari No. 10, Jakarta</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Green Circle. Seluruh hak cipta dilindungi.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
