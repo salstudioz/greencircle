@@ -1812,6 +1812,10 @@ a:hover {
         font-size: 1rem;
         margin-bottom: 2rem;
     }
+
+    .about-content {
+        flex-direction: column;
+    }
     
     .sdgs-content,
     .activity-content {
@@ -2187,8 +2191,8 @@ a:hover {
     }
 
     .about-content {
-                flex-direction: column;
-            }
+        flex-direction: column;
+    }
     
     /* Mobile buttons alternative */
     .mobile-nav-buttons {
