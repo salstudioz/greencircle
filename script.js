@@ -315,5 +315,13 @@ function setupMobileNav() {
       document.getElementById(hash).classList.add('active');
       document.querySelector(`[onclick*="${hash}"]`)?.classList.add('active');
     }
-  });
+  })
+      function scrollToNextSection() {
+  const nextSection = document.getElementById('next-section');
+  if (nextSection) {
+    nextSection.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+      
+      ;
   
