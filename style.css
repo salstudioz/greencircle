@@ -2185,6 +2185,10 @@ a:hover {
     .nav-buttons {
         display: none;
     }
+
+    .about-content {
+                flex-direction: column;
+            }
     
     /* Mobile buttons alternative */
     .mobile-nav-buttons {
