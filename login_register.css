@@ -64,7 +64,6 @@ form {
     text-align: center;
     padding: 40px;
     z-index: 1;
-    transition: .6s ease-in-out 1.2s, visibility 0s 1s;
 }
 
 .container.active .form-box {
@@ -194,27 +193,27 @@ form {
     justify-content: center;
     align-items: center;
     z-index: 2;
-    transition: .6s ease-in-out;
+
 }
 
 .toggle-panel.toggle-left {
     left: 0;
-    transition-delay: 1.2s;
+
 }
 
 .container.active .toggle-panel.toggle-left {
     left: -50%;
-    transition-delay: .6s;
+
 }
 
 .toggle-panel.toggle-right {
     right: -50%;
-    transition-delay: .6s;
+
 }
 
 .container.active .toggle-panel.toggle-right {
     right: 0;
-    transition-delay: 1.2s;
+
 }
 
 .toggle-panel p {
