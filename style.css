@@ -2782,3 +2782,74 @@ body.no-scroll {
         height: 250px;
     }
 }
+
+.heading-green-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+.btn-learn-more {
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  font-family: 'Quicksand';
+  font-weight: bold;
+  background-color: #28a745;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-learn-more:hover {
+  background-color: #218838;
+}
+
+.herob {
+    background: var(--gradient);
+    color: var(--white);
+    padding: 12rem 0 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Background GIF */
+.herob::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('images/seaswellaiesec.gif');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+/* Overlay Transparan */
+.herob::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Hitam dengan transparansi 40% */
+    z-index: 1;
+}
+
+/* Konten agar berada di atas layer overlay */
+.herob-content {
+    position: relative;
+    z-index: 2;
+}
